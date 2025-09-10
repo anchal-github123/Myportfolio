@@ -1,0 +1,80 @@
+import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { SiTailwindcss, SiJavascript, SiFigma } from "react-icons/si";
+import stackneuroProject from "../assets/Stackneuro.png"
+import connexBetterProject from "../assets/connexBetter.png"
+import swadeshacademy from "../assets/swadeshacademy.png"
+const projects = [
+  {
+    title: "StudyStack",
+    description: "Educational platform built with React, Redux, and Tailwind CSS",
+    image: stackneuroProject,
+    demo: "https://stackneuro.com/",
+    github: "https://github.com/anchal-github123/Stack-enuro",
+    tech: [<FaReact />, <FaHtml5 />, <FaCss3Alt />,<SiTailwindcss/>,<SiFigma/>],
+  },
+  {
+    title: "Weather App",
+    description: "Real-time weather app using React & OpenWeather API",
+    image: connexBetterProject,
+    demo: "https://connexbetter.com/",
+    github: "https://github.com/connexbetterwebdev12/connexwebsite",
+    tech: [<FaReact />, <FaNodeJs />, <FaHtml5 />, <FaCss3Alt />,<SiTailwindcss/>],
+  },
+  {
+    title: "Portfolio Website",
+    description: "My personal portfolio built using React & Tailwind",
+    image: swadeshacademy,
+    demo: "https://swadeshacademy.com/",
+    github: "https://github.com/anchal-github123/briliant-academy",
+   tech: [<FaReact />, <FaHtml5 />, <FaCss3Alt />,<SiTailwindcss/>,<SiFigma/>],
+  },
+];
+
+export default function Projects() {
+  return (
+    <section className="" id="Projects">
+      <h2 className="text-4xl font-bold text-center mb-12 ">Projects</h2>
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 max-w-6xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="drop-shadow-2xl bg-white/15 rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover p-3"
+            />
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-white mb-4">{project.description}</p>
+              <div className="flex gap-2 mb-4">
+                {project.tech.map((icon, i) => (
+                  <span key={i} className="text-white text-xl">
+                    {icon}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-4">
+                <a
+                  href={project.demo}
+                  className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+                  target="_blank"
+                >
+                  Live Demo
+                </a>
+                <a
+                  href={project.github}
+                  className="px-3 py-1 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
