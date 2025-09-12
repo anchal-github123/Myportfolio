@@ -5,24 +5,24 @@ import connexBetterProject from "../assets/connexBetter.png"
 import swadeshacademy from "../assets/swadeshacademy.png"
 const projects = [
   {
-    title: "StudyStack",
-    description: "Educational platform built with React, Redux, and Tailwind CSS",
+    title: "Stackneuro",
+  description: "Freelancing company website built with React, Redux, and Tailwind CSS to showcase services and projects.",
     image: stackneuroProject,
     demo: "https://stackneuro.com/",
     github: "https://github.com/anchal-github123/Stack-enuro",
     tech: [<FaReact />, <FaHtml5 />, <FaCss3Alt />,<SiTailwindcss/>,<SiFigma/>],
   },
   {
-    title: "Weather App",
-    description: "Real-time weather app using React & OpenWeather API",
+    title: "Connex Better",
+    description: "Corporate website for ConnexBetter, developed using React, Node.js, and Tailwind CSS to highlight business solutions.",
     image: connexBetterProject,
     demo: "https://connexbetter.com/",
     github: "https://github.com/connexbetterwebdev12/connexwebsite",
     tech: [<FaReact />, <FaNodeJs />, <FaHtml5 />, <FaCss3Alt />,<SiTailwindcss/>],
   },
   {
-    title: "Portfolio Website",
-    description: "My personal portfolio built using React & Tailwind",
+    title: "Swadesh Academy",
+   description: "Educational coaching website built with React and Tailwind CSS, featuring courses, admissions, and institute details.",
     image: swadeshacademy,
     demo: "https://swadeshacademy.com/",
     github: "https://github.com/anchal-github123/briliant-academy",
@@ -46,6 +46,9 @@ export default function Projects() {
               className="w-full h-48 object-cover p-3"
             />
             <div className="p-6">
+              <span className="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded-full mb-2">
+    Freelancing Project
+  </span>
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
               <p className="text-white mb-4">{project.description}</p>
               <div className="flex gap-2 mb-4">
